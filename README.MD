@@ -62,3 +62,53 @@ Vagrant.configure("2") do |config|
 
 end
 ```
+
+## Box files
+```
+# frank @ ZERG in /g/Backup/VagrantBoxes [18:05:36] C:130
+$ tree
+.
+├── StefanScherer
+│   ├── windows_10
+│   │   ├── StefanScherer_boxes_windows_10_versions_2019.07.11._providers_virtualbox.box
+│   │   └── StefanScherer_boxes_windows_10_versions_2019.07.11_providers_hyperv.box
+│   ├── windows_2019
+│   │   ├── StefanScherer_boxes_windows_2019_versions_2019.05.22_providers_hyperv.box
+│   │   └── StefanScherer_boxes_windows_2019_versions_2019.05.22_providers_virtualbox.box
+│   └── windows_2019_docker
+│       ├── StefanScherer_boxes_windows_2019_docker_versions_2019.07.22_providers_hyperv.box
+│       └── StefanScherer_boxes_windows_2019_docker_versions_2019.07.22_providers_virtualbox.box
+├── generic
+│   ├── generic_boxes_alpine37_versions_1.9.16_providers_hyperv.box
+│   └── generic_boxes_alpine37_versions_1.9.18_providers_hyperv.box
+├── gusztavvargadr
+│   ├── docker-windows
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-community-windows-10-1903-enterprise_providers_hyperv.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-community-windows-10-1903-enterprise_providers_virtualbox.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-community-windows-server-1809-standard_providers_hyperv.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-community-windows-server-1809-standard_providers_virtualbox.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-enterprise-windows-server-1809-standard-core_providers_hyperv.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-enterprise-windows-server-1809-standard-core_providers_virtualbox.box
+│   │   ├── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-enterprise-windows-server-1809-standard_providers_hyperv.box
+│   │   └── gusztavvargadr_boxes_docker-windows_versions_1809.0.1906-enterprise-windows-server-1809-standard_providers_virtualbox.box
+│   ├── readme.txt
+│   ├── ubuntu-server
+│   │   ├── gusztavvargadr_boxes_ubuntu-server_versions_1604.0.1906-lts_providers_hyperv.box
+│   │   └── gusztavvargadr_boxes_ubuntu-server_versions_1604.0.1906-lts_providers_virtualbox.box
+│   ├── visual-studio
+│   │   ├── gusztavvargadr_boxes_visual-studio_versions_2019.0.1906-community-windows-10-1903-enterprise_providers_hyperv.box
+│   │   ├── gusztavvargadr_boxes_visual-studio_versions_2019.0.1906-community-windows-10-1903-enterprise_providers_virtualbox.box
+│   │   ├── gusztavvargadr_boxes_visual-studio_versions_2019.0.1906-community-windows-server-1809-standard_providers_hyperv.box
+│   │   └── gusztavvargadr_boxes_visual-studio_versions_2019.0.1906-community-windows-server-1809-standard_providers_virtualbox.box
+│   ├── windows-10
+│   │   ├── gusztavvargadr_boxes_windows-10_versions_1903.0.1906-enterprise_providers_hyperv.box
+│   │   └── gusztavvargadr_boxes_windows-10_versions_1903.0.1906-enterprise_providers_virtualbox.box
+│   └── windows-server
+│       ├── gusztavvargadr_boxes_windows-server_versions_1809.0.1906-standard-core_providers_hyperv.box
+│       ├── gusztavvargadr_boxes_windows-server_versions_1809.0.1906-standard-core_providers_virtualbox.box
+│       ├── gusztavvargadr_boxes_windows-server_versions_1809.0.1906-standard_providers_hyperv.box
+│       └── gusztavvargadr_boxes_windows-server_versions_1809.0.1906-standard_providers_virtualbox.box
+├── misc
+│   └── scoreyou_boxes_baseMac_versions_0.1_providers_virtualbox.box
+└── temp
+```
