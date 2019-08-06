@@ -116,3 +116,14 @@ $ tree
 │   └── scoreyou_boxes_baseMac_versions_0.1_providers_virtualbox.box
 └── temp
 ```
+
+## Adding boxes from local disk example
+Note the `Add-VagrantBox` function is from a module in my dotfiles
+```
+cd G:\Backup\VagrantBoxes\StefanScherer\windows_10
+Add-VagrantBox -debug $true -filename .\StefanScherer_boxes_windows_10_versions_2019.07.11_providers_hyperv.box
+mkdir E:\Vagrant\vagrantfiles\StefanScherer\windows_10\hyperv
+cd E:\Vagrant\vagrantfiles\StefanScherer\windows_10\hyperv
+vagrant init StefanScherer/windows_10 --box-version 2019.07.11
+vagrant up
+```
