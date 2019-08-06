@@ -44,7 +44,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "hyperv" do |h|
     h.cpus = 6
-    h.memory = "8024"
+    h.memory = 5024
+    h.maxmemory = 5024
   end
 
 end
@@ -58,7 +59,8 @@ Vagrant.configure("2") do |config|
   
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
-    vb.memory = "2034"
+    vb.memory = 2034
+    vb.maxmemory = 2034
     vb.cpus = 6
   end
 
