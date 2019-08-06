@@ -7,9 +7,11 @@
 
 ## Important commands
 ```
-vagrant box add hashicorp/precise64 --provider hyperv
+vagrant box add hashicorp/precise64
+vagrant box remove hashicorp/precise64
+
 vagrant init
-vagrant init generic/alpine37 --box-version 1.9.18\
+vagrant init generic/alpine37 --box-version 1.9.18
 vagrant up
 vagrant up --provider-hyperv
 
