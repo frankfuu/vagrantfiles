@@ -1,0 +1,37 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "bento/ubuntu-18.04"
+    config.vm.box_version = "201906.18.0"
+    config.vm.box_check_update = false
+  
+    # config.vm.network "forwarded_port", guest: 80, host: 8080
+    
+    # config.vm.network "private_network", ip: "192.168.56.11"
+    # config.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet1', :adapter => 2
+  
+    # https://www.vagrantup.com/docs/networking/public_network.html
+    # config.vm.network "public_network"
+    # config.vm.network "public_network", bridge: "wlp4s0"
+    # config.vm.network "public_network", bridge: "wlp4s0", ip: "192.168.10.200"  
+  
+    config.vm.provider "virtualbox" do |vb|    
+      vb.gui = false
+      vb.memory = "8048"
+      vb.cpus = 8
+    end
+  
+    # Enable provisioning with a shell script. Additional provisioners such as
+    # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+    # documentation for more information about their specific syntax and use.
+    config.vm.provision "shell", inline: <<-SHELL
+      echo add mirrors and apt-get update
+      sed -i 's|deb http://archive.ubuntu.com.ubuntu|deb mirror://mirrors.ubuntu.com/mirrors.txt|g' /etc/apt/sources.list
+      sed -i '/deb-src/d' /etc/apt/sources.list
+      time apt-get update -y
+      time apt-get upgrade -y    
+    SHELL
+  
+  end
