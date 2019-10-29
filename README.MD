@@ -1,0 +1,20 @@
+## Usage
+
+
+Powershell under windows
+```
+# copy template over
+Copy-Item -r .\templates\virtualbox\bento\ubuntu-18.04\ $env:USERPROFILE\machines\ub1804 -force
+
+# check copied contents
+gci $env:USERPROFILE\machines\ub1804
+
+# install other dependencies
+vagrant plugin install vagrant-disksize
+
+# bring up environment
+cd $env:USERPROFILE\machines\ub1804; vagrant up
+
+# undo above
+Remove-Item -r $env:USERPROFILE\machines\ub1804
+```
