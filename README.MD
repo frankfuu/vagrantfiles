@@ -18,3 +18,10 @@ cd $env:USERPROFILE\machines\ub1804; vagrant up
 # undo above
 Remove-Item -r $env:USERPROFILE\machines\ub1804
 ```
+
+
+## To download more boxes
+```
+vagrant box add gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise --provider virtualbox
+```
+
