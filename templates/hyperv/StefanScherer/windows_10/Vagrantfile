@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "StefanScherer/windows_10"
+    config.vm.box_version = "2019.07.11"
+    config.vm.box_check_update = true
+  
+    config.vm.provider "hyperv" do |h|
+      h.cpus = 6
+      h.memory = 8024
+      h.maxmemory = 8024
+      h.enable_virtualization_extensions = true
+    end
+
+end
