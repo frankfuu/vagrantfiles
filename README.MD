@@ -1,5 +1,11 @@
-## Usage
 
+# Common additional dependencies 
+ - [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
+
+# List of plugins
+https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins
+
+## Usage
 
 Powershell under windows
 ```
@@ -11,6 +17,7 @@ gci $env:USERPROFILE\machines\ub1804
 
 # install other dependencies
 vagrant plugin install vagrant-disksize
+vagrant plugin install vagrant-vbguest
 
 # bring up environment
 cd $env:USERPROFILE\machines\ub1804; vagrant up
@@ -19,9 +26,12 @@ cd $env:USERPROFILE\machines\ub1804; vagrant up
 Remove-Item -r $env:USERPROFILE\machines\ub1804
 ```
 
-
 ## To download more boxes
 ```
 vagrant box add gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise --provider virtualbox
 ```
 
+## To init
+```
+vagrant init gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise
+```
