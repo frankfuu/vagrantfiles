@@ -35,3 +35,11 @@ vagrant box add gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise -
 ```
 vagrant init gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise
 ```
+
+## To use templates
+```
+
+# this creates a file named Vagrantfile in ~/machines/generic/10 folder and opens it in vim
+
+mkdir -p ~/machines/generic/debian10 && cp templates/virtualbox/Vagrantfile $_ && vim $_/Vagrantfile
+```

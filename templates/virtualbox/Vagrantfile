@@ -1,0 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+ 
+  config.vm.box = "" # e.g. gusztavvargadr/windows-10
+  config.vm.box_version = "" # e.g. 1903.0.1906-enterprise
+  
+  config.vm.box_check_update = false
+
+  # config.vm.synced_folder "data", "/vagrant_data"
+
+  # Will require the vagrant-disksize plugin. Install via vagrant plugin install vagrant-disksize
+  # config.disksize.size = '60GB'
+
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  
+  # config.vm.network "private_network", ip: "192.168.56.11"
+  # config.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet1', :adapter => 2
+
+  # https://www.vagrantup.com/docs/networking/public_network.html
+  # config.vm.network "public_network"
+  # config.vm.network "public_network", bridge: "wlp4s0" # view other network interfaces using "ip addr"
+  # config.vm.network "public_network", bridge: "wlp4s0", ip: "192.168.2.200"  
+  
+  config.vm.provider "virtualbox" do |vb|    
+    vb.gui = false
+    vb.memory = "8048"
+    vb.cpus = 8
+  end
+  
+end
