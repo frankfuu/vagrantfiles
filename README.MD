@@ -38,15 +38,7 @@ vagrant init gusztavvargadr/windows-10 --box-version 1909.0.2003-enterprise
 
 ## To use templates
 ```
-
 # this creates a file named Vagrantfile in ~/gusztavvargadr/windows-10 folder and populates it with a vagrant file with gusztavvargadr/windows-10 using version 1903.0.1906-enterprise
 
-mkdir -p ~/machines/gusztavvargadr/windows-10
-cp templates/virtualbox/Vagrantfile $_
-
-sed -i 's|boxName|gusztavvargadr/windows-10|' $_/Vagrantfile
-sed -i 's|boxVersion|1903.0.1906-enterprise|' $_
-
-cd ~/machines/gusztavvargadr/windows-10
-vagrant up
+./bootstrap.sh gusztavvargadr/windows-10 1903.0.1906-enterprise
 ```
