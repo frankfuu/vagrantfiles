@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    # check which boxes are available on system using "vagrant box list" or find new ones here - https://app.vagrantup.com/boxes/search
+    config.vm.box = "boxName" # e.g. gusztavvargadr/windows-10
+    config.vm.box_version = "boxVersion" # e.g. 1903.0.1906-enterprise 
+    config.vm.box_check_update = false
+
+    # Will require the vagrant-disksize plugin. Install via vagrant plugin install vagrant-disksize
+    # config.disksize.size = '60GB'
+
+    # config.vm.synced_folder "data", "/vagrant_data"
+
+    config.vm.provider "hyperv" do |h|
+      h.cpus = 6
+      h.memory = 8024
+      h.maxmemory = 8024
+      h.enable_virtualization_extensions = true
+    end
+
+end
