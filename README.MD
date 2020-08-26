@@ -1,4 +1,4 @@
-# Setup (on Windows0
+# Setup (on Windows)
 ```
 # set vagrant home directory
 [System.Environment]::SetEnvironmentVariable('VAGRANT_HOME', "V:\vagrant\hyperv\.vagrant.d\", [System.EnvironmentVariableTarget]::Machine)
