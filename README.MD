@@ -1,3 +1,7 @@
+# Windows Dependencies
+```
+choco install sed -y
+```
 
 # Common additional dependencies 
  - [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
