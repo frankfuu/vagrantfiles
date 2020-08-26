@@ -1,3 +1,12 @@
+# Setup (on Windows0
+```
+# set vagrant home directory
+[System.Environment]::SetEnvironmentVariable('VAGRANT_HOME', "V:\vagrant\hyperv\.vagrant.d\", [System.EnvironmentVariableTarget]::Machine)
+
+# check that it has been set
+echo $env:VAGRANT_HOME
+```
+
 # Windows Dependencies
 ```
 choco install sed -y
