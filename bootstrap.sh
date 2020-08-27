@@ -9,9 +9,9 @@ function_name() {
     echo boxVersion : $boxVersion       # e.g. // 1903.0.1906-enterprise
 
     mkdir -p ~/machines/$boxName
-    cp templates/virtualbox/Vagrantfile $_
-    sed -i "s|boxName|$boxName|" $_/Vagrantfile
-    sed -i "s|boxVersion|$boxVersion|" $_
+    cp templates/virtualbox/Vagrantfile ~/machines/$boxName
+    sed -i "s|boxName|$boxName|" ~/machines/$boxName/Vagrantfile
+    sed -i "s|boxVersion|$boxVersion|" ~/machines/$boxName/Vagrantfile
     cd ~/machines/$boxName
 
     echo bringing up $boxName on version $boxVersion ... 
